@@ -4,216 +4,103 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Kevin Arnold Gordo (1997: Mi Personal 1968)</title>
-  <!-- FONTS: + FERS -->
+  <!-- Google Fonts: STIX Two Text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Spectral:wght@400;700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fers-violeta: #aa75f5;
-      --fers-coral: #f87972;
-      --fers-rosa: #ffb6b3;
-      --fers-lavanda: #b886fd;
-      --fers-lila-suave: #c7a0fe;
-      --fers-gris-violeta: #9a90a7;
-      --fers-morado-humo: #635775;
-      --fers-salmon: #fc8983;
-      --fers-morado-profundo: #372f42;
-      --fers-gris-purpura: #574b68;
-      --fers-gris-violeta-medio: #706383;
-      --fers-lavanda-pastel: #e4d2fe;
-      --fers-coral-suave: #f36f68;
-      --fers-lavanda-blanco: #f3ebff;
+      --fondo: #372f42;
+      --texto-claro: #f3ebff;
+      --texto-secundario: #e4d2fe;
+      --titulo-1: #aa75f5;
+      --titulo-2: #b886fd;
+      --acento-link: #f87972;
+      --acento-link-hover: #fc8983;
     }
     body {
-      background: linear-gradient(180deg, var(--fers-morado-profundo) 0%, var(--fers-lavanda-blanco) 100%);
-      color: var(--fers-morado-humo);
+      background: var(--fondo);
+      color: var(--texto-claro);
       font-family: "STIX Two Text", serif;
-      margin: 0; padding: 2rem; line-height: 1.82;
+      margin: 0; padding: 0;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     article {
-      max-width: 900px;
-      margin: auto;
-      background: rgba(186,134,253,0.11); /* fers-lavanda */
-      padding: 2.8rem 2.5rem 2rem 2.5rem;
-      border-radius: 22px;
-      box-shadow: 0 0 62px 0 var(--fers-violeta),0 0 32px var(--fers-salmon);
-      border: 2px solid var(--fers-lila-suave);
+      max-width: 800px;
+      margin: 48px auto 0 auto;
+      background: rgba(55, 47, 66, 0.98); /* fondo translúcido */
+      border-radius: 16px;
+      box-shadow: 0 2px 32px rgba(170,117,245,0.08);
+      padding: 2.8rem 2.2rem 2rem 2.2rem;
       font-size: 1.19rem;
-      letter-spacing: 0.015em;
-      position: relative;
-    }
-    article::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      border-radius:20px;
-      pointer-events:none;
-      background: linear-gradient(120deg, transparent 75%, var(--fers-rosa) 100%);
-      opacity:0.06;
-      z-index:-1;
+      letter-spacing: 0.011em;
+      line-height: 1.84;
+      border: 1px solid var(--titulo-2);
     }
     h1 {
-      color: var(--fers-violeta);
-      font-family: 'IBM Plex Mono', monospace;
+      color: var(--titulo-1);
+      font-size: 2.4rem;
+      font-weight: 700;
       text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 16px var(--fers-lila-suave);
-      letter-spacing: 0.08em;
-    }
-    h1 small {
-      display:block;
-      font-size:1.1rem;
-      color: var(--fers-coral-suave);
-      font-family:'Spectral',serif;
-      margin-top:0.3rem;
-      font-style:italic;
+      margin:0 0 1.2rem 0;
+      letter-spacing: 0.02em;
     }
     h2, h3 {
-      color: var(--fers-rosa);
-      font-family: 'IBM Plex Mono', monospace;
-      font-size:1.25rem;
-      margin-top:2.2rem;
-      margin-bottom:1rem;
-      letter-spacing:0.07em;
+      color: var(--titulo-2);
+      margin:2.1rem 0 1.4rem 0;
+      font-size:1.34rem;
+      font-weight: 700;
+      letter-spacing:0.015em;
     }
     p {
-      margin-bottom: 1.17rem;
-      font-family: "STIX Two Text", serif;
-      color: var(--fers-gris-purpura);
-      background: linear-gradient(90deg, transparent, var(--fers-lavanda-pastel) 84%, transparent 100%);
-      padding: 0.15rem 0.7rem 0.09rem 0.45rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(170,117,245,0.02);
+      color: var(--texto-secundario);
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
     }
-    strong { color: var(--fers-violeta); }
-    em { color: var(--fers-coral-suave); }
-    a {
-      color: var(--fers-salmon);
-      text-decoration: none;
+    strong {
+      color: var(--titulo-1);
       font-weight: bold;
-      transition: color 0.18s, box-shadow 0.17s;
-      border-bottom: 1.5px solid var(--fers-coral);
-      background: linear-gradient(90deg, var(--fers-lavanda-pastel) 0%, transparent 100%);
-      border-radius: 3px;
-      padding: 0 2px;
+    }
+    em {
+      color: var(--acento-link);
+      font-style: italic;
+      font-weight: 500;
+    }
+    a {
+      color: var(--acento-link);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1.5px solid var(--acento-link);
+      transition: color .18s, border-bottom .18s;
     }
     a:hover {
-      color: var(--fers-violeta);
-      background: linear-gradient(90deg, var(--fers-violeta) 0%, var(--fers-coral-suave) 100%);
+      color: var(--acento-link-hover);
+      border-bottom: 2px solid var(--acento-link-hover);
       text-decoration: underline;
-      box-shadow: 0 2px 6px var(--fers-violeta);
-      border-bottom: 2px solid var(--fers-violeta);
-    }
-    hr {
-      border: none;
-      border-top: 1.2px dashed var(--fers-lila-suave);
-      margin: 2.4rem 0 2.1rem 0;
     }
     footer {
       text-align: center;
-      font-size: 0.89rem;
-      color: var(--fers-gris-violeta-medio);
-      margin-top: 2.8rem;
-      padding-top: 1.1rem;
-      border-top: 2px dashed var(--fers-morado-humo);
-      background: linear-gradient(90deg,var(--fers-lavanda-blanco) 10%,transparent 90%);
-      box-shadow:0 -4px 40px rgba(119,95,220,0.04);
-      border-radius:0 0 16px 16px;
+      font-size: 0.97rem;
+      color: var(--titulo-2);
+      margin-top: 2.2rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--titulo-2);
+      background: none;
+      border-radius:0 0 13px 13px;
     }
-    /* Responsive */
-    @media (max-width:750px) {
-      article { padding: 1.1rem; font-size: 0.97rem;}
-      h1 {font-size:1.25rem;}
+    @media (max-width: 750px) {
+      article { padding: 1.1rem; font-size: 0.98rem;}
+      h1 {font-size: 1.45rem;}
     }
   </style>
 </head>
 <body>
   <article>
-    <h1>
-      Kevin Arnold Gordo<br>
-      <small>(1997: Mi Personal 1968)</small>
-    </h1>
-    
-    <p><strong>Corría el año de 1997</strong> y no me pregunten si era verano o si aquel invierno pegó más duro que la inflación: los recuerdos también se archivan con nombres vagos y anotaciones desordenadas.</p>
-
-    <p><strong>Era mi personal 1968.</strong> No, no caía París ni ardían barricadas; apenas caía yo ante los espejos, atrapado en la talla 40 y orbitando los 90 kilos como quien ronda un planeta inexplorado con gravedad inclemente.</p>
-    <p>Ahí empezó mi historia. O al menos la parte que vale la pena contar sin anestesia.</p>
-
-    <p>
-      Una amiga de mi madre, guardiana oficial de los parecidos ocasionales y especialista en certezas devastadoras, sentenció un día con la precisión de un notario leyendo un testamento:<br>
-      <em>“Tu hijo se parece a Kevin Arnold, pero como si fuera alérgico a los camarones”</em>
-    </p>
-    <p>
-      En ese momento firmó una de esas frases que se heredan como muebles antiguos y se recuerdan con risas años después. Nada de comparaciones genéricas, sino genio absoluto: Kevin Arnold versión hinchada, alérgico, extraviado entre antihistamínicos y pantalones de talla prohibitiva.
-    </p>
-    <p>
-      Pero claro que no. No se trata aquí de exponer rojizos episodios de alergias, ni paseos urgentes rumbo al hospital tras una cómica reacción. Aquí, el asunto es el <strong>GORDO</strong> —así, con mayúsculas; como si fuera título de película de culto o ese apodo que te persigue, aunque te cambies de ciudad y de pantalón.
-    </p>
-    <p>
-      Imagina el momento: sala familiar, lámpara prendida, y la amiga de tu mamá suelta la perla más precisa jamás pronunciada en sobremesa mexicana:<br>
-      <em>“Tu hijo se parece a Kevin Arnold, pero versión gordo. O sea, Kevin Arnold si el casting hubiera sido en una taquería y no en un suburbio gringo.”</em>
-    </p>
-    <p>
-      Así. Seco. Notarial. Sin anestesia ni manteca vegetal. Porque hay verdades que no requieren alegoría médica: basta mirarte, atestado de nostalgia ochentera y lonjas adolescentes, para entender que la gordura no necesita excusas, ni mariscos, ni placas de rayos X.
-    </p>
-    <p>
-      La gordura es un estado de ánimo, un género de vida, una cosmovisión con extra de queso. Es, como Kevin Arnold después de tres vueltas por el buffet, el epítome del exceso emocional, la comedia con guarnición incluida.
-    </p>
-    <hr>
-
-    <h2>Karla: Mi Winnie Cooper Versión Mean Girl Mexa</h2>
-    <p>
-      Karla era mi Winnie Cooper, pero la versión mean girl mexicana. No es una construcción nostálgica, es un arquetipo viviente. La Ana Pau de cepa, esa especie en extinción de niña bien que ya nace con el manual de supervivencia social entre las páginas de su revista importada.
-    </p>
-    <p>
-      Beverly Hills 90210 donde otros tienen Chespirito, la brecha generacional hecha persona, la embajadora del aspiracionismo preadolescente que te recuerda que no todos los güeros son iguales: algunos vienen con pedigree, otros vienen con lonjas.
-    </p>
-    <p>
-      El día de mi declaración —porque los gordos legendarios no lanzan indirectas, lanzan órdagos existenciales—, Karla no sólo soltó una carcajada que tumbó media cuadra, sino que compuso, en tiempo real, el jingle más letal jamás pronunciado:
-    </p>
-    <p>
-      <em>“Es de cerdo, huele a cerdo.”</em>
-    </p>
-    <p>
-      Seis palabras. Doce sílabas. Una sentencia de muerte social con eficacia quirúrgica. No es sarcasmo, no es crueldad casual: es performance art de la humillación, con pausa dramática y guiño de directora de casting que encuentra al villano perfecto para su película mental.
-    </p>
-    <p>
-      El timing es impecable: no responde con un “no” convencional, va directo a la yugular existencial, al núcleo donde se cruzan inseguridad corporal y deseo romántico. Y lo hace en tiempo real, como si hubiera estado esperando ese momento toda la primaria.
-    </p>
-    <p>
-      Fue un KO narrativo digno del Puño Fantasma del Ave Fénix. Icónica. La referencia a Saint Seiya no es casual: esto no es bullying, es alta técnica secreta escolar. Ikki arrodillado ante el nivel legendario de Karla.
-    </p>
-    <p>
-      La frase se convierte en DNA mortal, trasciende generaciones. Infecta cada nueva audiencia; la cadena alimenticia de la humillación jamás se rompe mientras el jingle persista.
-    </p>
-    <p>
-      Mi 4 de julio era un lunes nublado viendo Dragon Ball, épicas entre la grasa de la torta y la nostalgia prematura. El amor, para los gordos Kevin Arnold Mexas, no es de final feliz sino de larga duración –resistente e inolvidable–, como estampa que arde y no borra ni el jabón Zote de las buenas costumbres.
-    </p>
-    <p>
-      A veces, la verdadera épica no es besar a Winnie bajo fuegos artificiales, sino sobrevivir con dignidad al jingle que te parte la infancia y poder reírte más fuerte que la carcajada original.
-    </p>
-    <hr>
-
-    <h2>Epílogo de Talla Grande</h2>
-    <p>
-      Nunca entenderé por qué la gente se empeña en asignarte biografías ajenas. Como si la nostalgia de una serie noventera compensara el ridículo de ser el gordito del salón, cronista precoz de desamores y antojos insatisfechos.
-    </p>
-    <p>
-      Si uno empieza la historia justo aquí, es porque hasta las tallas grandes esconden épicos inicios. A los 12 años sólo sabes que la vida es un archipiélago de momentos patéticos y gloriosos: el sándwich mal hecho, la calificación posible, el amor imposible, la mirada ajena que pesa como una maleta de ropa que no te entra.
-    </p>
-    <p>
-      En 1997, mi propio "Verano del 69", pero narrado desde el rincón menos glamuroso del salón de clases, decidí no morir ahogado en la mediocridad. Mi pequeñísima y entrañable epopeya apenas comienza.
-    </p>
-    <p>
-      Porque toda biografía memorable necesita su dosis de gordura existencial, sarcasmo antihistamínico y esa nostalgia afilada que no deja cicatriz, sino ganas de aplaudir. No todos fuimos Kevin Arnold, pero todos tenemos un año que merece ser el ancla de todo, con brutal honestidad y una talla de más.
-    </p>
-    
+    <article> <h1>Kevin Arnold Gordo<br><small style="color:var(--titulo-2);font-size:1.18rem;font-weight:400;">(1997: Mi Personal 1968)</small></h1> <p><strong>Corría el año de 1997</strong>, y no me pregunten si era verano o si aquel invierno pegó más duro que la inflación: los recuerdos también se archivan con nombres vagos y anotaciones desordenadas. Fechas imprecisas, pero emociones notariales. Era mi personal 1968. No, no caía París ni ardían barricadas; apenas caía yo ante los espejos, atrapado en la talla 40 y orbitando los 90 kilos como quien ronda un planeta inexplorado con gravedad inclemente.</p> <p>Ahí empezó mi historia. O al menos la parte que vale la pena contar sin anestesia.</p> <p>Una amiga de mi madre, guardiana oficial de los parecidos ocasionales y especialista en certezas devastadoras, sentenció un día con la precisión de un notario leyendo un testamento:<br> <em>—"Tu hijo se parece a Kevin Arnold, pero como si fuera alérgico a los camarones"—</em></p> <p>En ese momento firmó una de esas frases que se heredan como muebles antiguos y se recuerdan con risas años después. Nada de comparaciones genéricas, sino genio absoluto: Kevin Arnold versión hinchada, alérgico, extraviado entre antihistamínicos y pantalones de talla prohibitiva.</p> <p>Pero claro que no. No se trata aquí de exponer rojizos episodios de alergias, ni paseos urgentes rumbo al hospital tras una cómica reacción alérgica a los camarones. Aquí, el asunto es el <strong>GORDO</strong> —así, con mayúsculas; como si fuera título de película de culto o ese apodo que te persigue, aunque te cambies de ciudad y de pantalón.</p> <p>Imagina el momento fundacional: sala familiar, lámpara prendida, la amiga de tu mamá suelta la perla más precisa jamás pronunciada en sobremesa mexicana:<br> <em>—"Tu hijo se parece a Kevin Arnold, pero versión gordo. O sea, Kevin Arnold si el casting hubiera sido en una taquería y no en un suburbio gringo."</em></p> <p>Así. Seco. Notarial. Sin anestesia ni manteca vegetal. Porque hay verdades que no requieren alegoría médica: basta mirarte, atestado de nostalgia ochentera y lonjas adolescentes, para entender que la gordura no necesita excusas, ni mariscos, ni placas de rayos X: la gordura es un estado de ánimo, un género de vida, una cosmovisión con extra de queso. Es, como Kevin Arnold después de tres vueltas por el buffet, el epítome del exceso emocional, la comedia con guarnición incluida.</p> <p>¿Qué mejor comparación que ese Kevin Arnold que nunca salió en pantalla? El que saltaba a la piscina vestido, evitaba las playeras blancas y aprendió a reírse primero, antes de que te rieras tú. Habría sido épico que la amiga, con precisión quirúrgica, coronara:<br> <em>—"No te ofendas, pero es como si tu hijo fuera el Kevin Arnold gordo, el que nunca le quedó el suéter de Winnie Cooper."</em></p> <p>Porque no hay comparación más brutalmente honesta, más universal, más cicatriz compartida.</p> <p>Nadie olvida al GORDO. El GORDO es el copiloto de todas las historias cómicas y agridulces: el héroe improbable, el protagonista alternativo, el que hacía del uniforme escolar un simulacro de tienda de campaña.</p> <p>Y en ese espejo narrativo, entre sarcasmo, verdad y el eco de una sobremesa, se resume una generación: la nuestra, la de los gordos legendarios que aprendieron a sortear apodos, a doblar la realidad (y a veces la camiseta) con tal de encajar.</p> <p>Porque algunos fuimos Kevin Arnold...<br> ...pero yo fui el Kevin Arnold GORDO, y eso, querido lector, no lo entrega ningún guionista: hay que sudarlo, reírlo y contarlo sin vergüenza.</p> <p>El parecido con Kevin no era meramente físico. Era existencial. Y con lonja certificada.</p> <p>Hoy lo agradezco; en aquel entonces lo resentí como quien descubre que el apodo le queda más justo que el último pantalón de mezclilla. Si acaso, Kevin Arnold después de perder un partido de fútbol y atiborrarse de tacos al pastor con todo y cilantro del remordimiento.</p> <h2>Karla: Mi Winnie Cooper Versión Mean Girl Mexa</h2> <p>Karla era mi Winnie Cooper, pero la versión mean girl mexicana. No es una construcción nostálgica, es un arquetipo viviente. La Ana Pau de cepa, esa especie en extinción de niña bien que ya nace con el manual de supervivencia social entre las páginas de su revista importada. Beverly Hills 90210 donde otros tienen Chespirito, la brecha generacional hecha persona, la embajadora del aspiracionismo preadolescente que te recuerda que no todos los güeros son iguales: algunos vienen con pedigree, otros vienen con lonjas.</p> <p>El día de mi declaración —porque los gordos legendarios no lanzan indirectas, lanzan órdagos existenciales—, Karla no sólo soltó una carcajada que tumbó media cuadra, sino que compuso, en tiempo real, el jingle más letal jamás pronunciado por los labios de una diosa prepúber:<br> <em>"Es de cerdo, huele a cerdo."</em></p> <p>Seis palabras. Doce sílabas. Una sentencia de muerte social con ritmo de trabalenguas y eficacia quirúrgica. No es sarcasmo, no es crueldad casual: es performance art de la humillación, con pausa dramática incluida y guiño de directora de casting que acaba de encontrar al villano perfecto para su película mental.</p> <p>El timing es impecable: no responde con un "no" convencional, no busca la salida fácil del "mejor seamos amigos". Va directo a la yugular existencial, al núcleo del complejo físico, al centro exacto donde se cruzan la inseguridad corporal y el deseo romántico. Y lo hace en tiempo real, como si llevara años ensayando ese momento, como si hubiera estado esperando la oportunidad perfecta para desplegar su arsenal de destrucción masiva preadolescente.</p> <p>Fue un KO narrativo digno del Puño Fantasma del Ave Fénix. Literal, Ikki se arrodilla ante el nivel legendario de Karla Aydee.</p> <p>La referencia a Saint Seiya no es casual: porque esto no es bullying común, es elevación del rechazo a arte marcial, la técnica secreta que no aparece en ningún manual de supervivencia escolar. Ikki, el santo de bronce más brutal del zodíaco, reconociendo la superioridad técnica de una niña de primaria. La hipérbole perfecta para un trauma que necesita marcos de referencia épicos para ser procesado.</p> <p>"Es de cerdo, huele a cerdo" es DNA mortal, trasciende generaciones. No es solo la frase que te destroza; es el virus mental que se replica cada vez que la cuentas, que infecta a nuevas audiencias y se fortalece con cada risa ajena. Cuando la narré frente a los hijos de mi novia dos décadas después, entre cubrebocas, TikToks y terapia generacional, estallaron en risa: la cadena alimenticia de la humillación jamás se rompe mientras el jingle persista.</p> <p>Porque sí: "Es de cerdo, huele a cerdo" es antimateria emocional, Vietnam mental instantáneo. Y todos tenemos un "Vietnam" en la memoria, aunque use bloqueador solar.</p> <p>Nunca fui su novio. Fui algo más legendario: eterno enamorado en slow motion, el que no tuvo primer beso bajo fuegos artificiales ni en bosques gringos ni con mariachi de fondo. Mi 4 de julio era un lunes nublado viendo Dragon Ball, inventando épicas entre la grasa de la torta y la nostalgia prematura. El amor, para los gordos Kevin Arnold Mexas, no es de final feliz sino de larga duración –resistente, inolvidable–, como una estampa que arde y no se borra ni con el jabón Zote de las buenas costumbres.</p> <p>Mic drop: A veces, la verdadera épica no es besar a Winnie bajo fuegos artificiales, sino sobrevivir con dignidad al jingle que te parte la infancia y aún así, años después, poder reírte más fuerte que la carcajada original. Porque algunos fuimos leyenda en palabras ajenas… pero sólo los épicos hacen del ridículo una joya eterna.</p> <h2>Epílogo de Talla Grande</h2> <p>Y mire usted, nunca entenderé por qué la gente se empeña en asignarte biografías ajenas. Como si la nostalgia de una serie noventera pudiera compensar el ridículo de ser el gordito del salón, cronista precoz de desamores y antojos insatisfechos.</p> <p>Si uno empieza a contar la historia justo aquí, es porque hasta las tallas grandes esconden épicos inicios. A los 12 años no tienes idea de la gravedad de tus historias; sólo sabes que la vida es un archipiélago de momentos patéticos y gloriosos: el sándwich mal hecho, la calificación posible, el amor imposible, la mirada ajena que pesa lo mismo que una maleta llena de ropa que ya no te entra.</p> <p>Así que, en 1997, año de mi propio "Verano del 69" (pero narrado desde el rincón menos glamuroso del salón de clases), decidí que la única forma de no morir ahogado en la mediocridad era escribir lo que nadie más se atrevía a contar: mi pequeñísima, brutal y entrañable epopeya.</p> <p>Y esto, caballeros y damas, apenas comienza. Porque toda biografía memorable necesita su dosis de gordura existencial, sarcasmo antihistamínico y esa punzada de nostalgia tan afilada que no deja cicatriz, sino ganas de aplaudir.</p> <p>No todos fuimos Kevin Arnold, pero todos tenemos un año que merece ser el ancla de todo, con brutal honestidad y una talla de más.</p>
     <footer>
       <p><a href="index.html">← Regresar a Plainwrath</a></p>
       <p>Plainwrath © ?–2025 · Creative Nectar | Interdimensional | Recuperado | No autorizado | No monetizable | Sagrado | Engendrado no creado</p>
