@@ -2,27 +2,126 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Bienvenido a Plainwrath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plainwrath</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&family=Righteous&family=Spectral:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: system-ui, Arial, sans-serif;
-      background-color: #0f0f0f; color: #f5f5f5;
-      margin: 0; padding: 2em; line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #0e0e0e;
+      color: #e8e4ff;
+      font-family: 'IBM Plex Mono', monospace;
+      background-image: linear-gradient(to bottom, #181818, #0e0e0e);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    h1, h2 { text-align: center; color: #ffcc00; }
-    article { max-width: 800px; margin: auto; }
+
+    header {
+      text-align: center;
+      border-bottom: 1px dashed #a87fff;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
+      color: #a87fff;
+      margin: 0.5rem 0;
+    }
+
+    p.tagline {
+      font-family: 'Victor Mono', monospace;
+      color: #bbb;
+      font-style: italic;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(40, 40, 40, 0.8);
+      border: 1px solid #2d2d2d;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      font-family: 'Spectral', serif;
+      line-height: 1.6;
+      animation: fadeIn 2s ease;
+    }
+
+    main h2 {
+      text-align: center;
+      color: #d7aaff;
+      font-family: 'Righteous', cursive;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      padding: 1rem;
+      border-top: 1px dashed #3a3a3a;
+    }
+
+    .standby {
+      opacity: 0.2;
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
-  <article>
-    <h1>Bienvenido a Plainwrath</h1>
-    <h2>¿Qué es Plain Wrath?</h2>
-    <p>Plain Wrath no sale en el diccionario, pero sí en este rincón donde todo cabe menos las excusas. Es un blog que no presume etiquetas, ni corre detrás de la última tendencia, porque su especialidad es el menú variado entre lo absurdo y lo esencial: notas, canciones, consejos para sobrevivir apps y días en piloto automático, y manuales que no pretenden cambiarte la vida, pero sí el humor de la tarde.​</p>
-    <p>Aquí la simpleza (“plain”) se encuentra con la furia (“wrath”) que uno trae cuando se decide a escribir lo que incomoda, a contar lo que no cabe en el feed y a recomendar lo que vale la pena sin el filtro del community manager. Es un espacio donde la anécdota y el dato se mezclan, donde un tip convive con una playlist, y donde los lunes no son imposibles, solo más largos de lo que los posts alcanzan.</p>
-    <p>No hay solemnidad, pero tampoco superficialidad: la honestidad es la moneda y el sarcasmo el cambio. Si esperabas manual de autoayuda, mejor busca en otra pestaña. Aquí cada consejo se prueba antes de compartirse, cada historia tiene datos y cada canción se recomienda con el pulso del que sabe que lo bueno nunca se publica a tiempo.</p>
-    <p>Plain Wrath es eso: página sin etiquetas, entrada sin corbata y bienvenida donde importa más el contenido que el empaque. Aquí se escribe para sobrevivir la rutina y para que la furia—siempre simple, nunca impuesta—tenga dónde quedarse sin pedir permiso.</p>
-    <p>¿Quieres saber qué es? Es esto: lo que lees, lo que escuchas, lo que se queda y lo que se borra. Ponte cómodo—o incómodo. Igual, vas a regresar.</p>
-  </article>
+  <header>
+    <h1>PLAINWRATH</h1>
+    <p class="tagline">Esto no es una app. Es una furia contenida en HTML.</p>
+  </header>
+
+  <main>
+    <h2>Bienvenido a Plainwrath</h2>
+    <p><strong>¿Qué es Plain Wrath?</strong></p>
+    <p>
+      Plain Wrath no sale en el diccionario, pero sí en este rincón donde todo cabe menos las excusas.
+      Es un blog que no presume etiquetas, ni corre detrás de la última tendencia, porque su especialidad
+      es el menú variado entre lo absurdo y lo esencial: notas, canciones, consejos para sobrevivir apps
+      y días en piloto automático, y manuales que no pretenden cambiarte la vida, pero sí el humor de la tarde.
+    </p>
+    <p>
+      Aquí la simpleza (“plain”) se encuentra con la furia (“wrath”) que uno trae cuando se decide a escribir
+      lo que incomoda, a contar lo que no cabe en el feed y a recomendar lo que vale la pena sin el filtro del
+      community manager. Es un espacio donde la anécdota y el dato se mezclan, donde un tip convive con una playlist,
+      y donde los lunes no son imposibles, solo más largos de lo que los posts alcanzan.
+    </p>
+    <p>
+      No hay solemnidad, pero tampoco superficialidad: la honestidad es la moneda y el sarcasmo el cambio.
+      Si esperabas manual de autoayuda, mejor busca en otra pestaña. Aquí cada consejo se prueba antes de compartirse,
+      cada historia tiene datos y cada canción se recomienda con el pulso del que sabe que lo bueno nunca se publica a tiempo.
+    </p>
+    <p>
+      Plain Wrath es eso: página sin etiquetas, entrada sin corbata y bienvenida donde importa más el contenido que el empaque.
+      Aquí se escribe para sobrevivir la rutina y para que la furia—siempre simple, nunca impuesta—tenga dónde quedarse sin pedir permiso.
+    </p>
+    <p>
+      ¿Quieres saber qué es? Es esto: lo que lees, lo que escuchas, lo que se queda y lo que se borra.
+      Ponte cómodo—o incómodo. Igual, vas a regresar.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 1977–2025 Plainwrath Recovery Unit</p>
+    <p class="standby">[Secciones en construcción: ./bitácora ./notasmentales ./planwrathos ./residuos]</p>
+    <p style="margin-top:1rem;font-size:0.75rem;color:#a87fff;line-height:1.4;text-align:center;">
+  Plainwrath © ?–2025 · Licencia: <em>Creative Nectar | Interdimensional | Recuperado | No autorizado | No monetizable | Sagrado | Engendrado no creado</em><br>
+  <strong>En memoria de Peggy 🕯️🕊️🧘✨👽</strong>
+</p>
+  </footer>
 </body>
 </html>
